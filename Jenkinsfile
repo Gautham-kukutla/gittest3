@@ -3,7 +3,7 @@ agent any
   stages{
   stage('Testing webhook'){
   steps{
-    echo "Success"
+    echo "Jenkins in master"
   }}
   }
 }
