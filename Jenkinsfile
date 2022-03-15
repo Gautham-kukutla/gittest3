@@ -5,5 +5,23 @@ agent any
   steps{
     echo "Jenkins in dev branch"
   }}
+    stage ('test') {
+        when {
+            expression{
+            GIT_BRANCH == 'dev'
+            }
+        }
+        steps {
+             echo 'Test stage main is executed.'
+        }}
+        stage ('Deploy') {
+        when {
+            expression{
+            BRANCH_NAME == 'master'
+            }}
+        steps {
+             echo 'Test stage Master is executed.'
+        }
+    }
  }
 }
