@@ -12,7 +12,7 @@ agent any
             }
         }
         steps {
-             echo 'Test stage main is executed.'
+             echo 'Test stage dev is executed.'
         }}
         stage ('Deploy') {
         when {
