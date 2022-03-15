@@ -23,5 +23,18 @@ agent any
              echo 'Test stage Master is executed.'
         }
     }
-  }
+  }post { 
+        always { 
+            echo 'This is post always'
+        }
+    failure { 
+            echo 'This is post failure'
+        }
+    unsuccessful{
+        echo 'this is post unsuccessful'
+    }
+    success { 
+            echo 'This is post success'
+        }}
+}
 }
