@@ -37,4 +37,3 @@ agent any
             echo 'This is post success'
         }}
 }
-}
