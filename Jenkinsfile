@@ -1,11 +1,11 @@
 pipeline {
-  agent any
+ agent any
   
   stages {
-  stage('Testing webhook'){
-  steps{
-    echo "Jenkins in master"
-  }}
+    stage('Testing webhook'){
+      steps{
+        echo "Jenkins in master"
+  } }
     stage ('test') {
         when {
             expression{
@@ -14,17 +14,18 @@ pipeline {
         }
         steps {
              echo 'Test stage dev is executed.'
-        }}
+        } }
         stage ('Deploy') {
         when {
             expression{
            BRANCH_NAME == 'master'
-            }}
+            } }
         steps {
              echo 'Test stage Master is executed.'
         }
     }
-  }post { 
+  }
+  post { 
         always { 
             echo 'This is post always'
         }
@@ -36,5 +37,5 @@ pipeline {
     }
     success { 
             echo 'This is post success'
-        }}
+        } }
 }
