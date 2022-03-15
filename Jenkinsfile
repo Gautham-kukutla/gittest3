@@ -2,11 +2,11 @@ pipeline {
   agent any
   
   stages {
-   stage('Testing webhook'){
+   stage('Start'){
     steps{
       echo "Jenkins in dev branch"
   } }
-    stage ('test') {
+    stage ('dev branch test') {
         when {
             expression{
             GIT_BRANCH == 'dev'
@@ -15,7 +15,7 @@ pipeline {
         steps {
              echo 'Test stage dev is executed.'
         } }
-        stage ('Deploy') {
+        stage ('master branch test') {
           when {
             expression{
              BRANCH_NAME == 'master'
