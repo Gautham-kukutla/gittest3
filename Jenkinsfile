@@ -1,6 +1,6 @@
-pipeline{
+pipeline {
 agent any
-  stages{
+  stages {
   stage('Testing webhook'){
   steps{
     echo "Jenkins in dev branch"
