@@ -18,7 +18,7 @@ pipeline {
         stage ('master branch test') {
           when {
             expression{
-             BRANCH_NAME == 'master'
+             GIT_BRANCH == 'master'
             } }
         steps {
              echo 'Test stage Master is executed.'
